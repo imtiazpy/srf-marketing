@@ -1,19 +1,18 @@
 import React from 'react';
+import Header from '../navigation/Header/Header';
 
 
-export interface ILayout extends React.ComponentPropsWithoutRef<'div'>{
+export interface ILayout extends React.ComponentPropsWithoutRef<'div'> {
 
 }
 
-
 const Layout: React.FC<ILayout> = ({ children, ...divProps }) => {
-    return (
-        <div>
-            I'm from layout
-
-            {children}
-        </div>
-    );
+  return (
+    <>
+      <Header />
+      <main className="md:container flex-grow">{children}</main>
+    </>
+  );
 };
 
 export default Layout;
