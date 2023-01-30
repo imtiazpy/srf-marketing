@@ -10,7 +10,7 @@ const Layout: React.FC<ILayout> = ({ children, ...divProps }) => {
   return (
     <>
       <Header />
-      <main className="md:container flex-grow">{children}</main>
+      <main className="flex-grow">{children}</main>
     </>
   );
 };
