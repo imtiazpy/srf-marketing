@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { Transition } from '@headlessui/react';
 import { FaToggleOff, FaToggleOn } from 'react-icons/fa';
 import { MenuItems } from '../MenuItems';
+import styles from './Header.module.css';
 
 export interface IHeader extends React.ComponentPropsWithoutRef<'header'> { }
 
@@ -15,8 +16,8 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
   return (
     <header {...headerProps} className={`${className}`}>
       <div>
-        <nav className="shadow-lg w-full z-10">
-          <div className="w-full bg-purple-900">
+        <nav className="shadow-lg z-50 fixed w-full top-0">
+          <div className={`w-full ${styles.bgTransparent}`}>
             <div className="flex items-center h-[10vh] w-full">
               <div className="flex items-center  mx-20  justify-between w-full">
                 <div className="flex justify-center items-center flex-shrink-0 ">
@@ -76,7 +77,7 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
                 <div className="md:hidden" id="mobile-menu">
                   <div
                     ref={ref}
-                    className="flex flex-col bg-purple-900 shadow-lg px-20 pt-2 pb-10 space-y-1 sm:px-20"
+                    className={`${styles.bgTransparent} flex flex-col shadow-lg px-20 pt-2 pb-10 space-y-1 sm:px-20`}
                   >
                     {MenuItems.map(({ name, label }, index) => (
                       <Link
