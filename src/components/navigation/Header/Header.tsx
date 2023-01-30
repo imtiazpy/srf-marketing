@@ -15,8 +15,8 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
   return (
     <header {...headerProps} className={`${className}`}>
       <div>
-        <nav className="shadow-sm w-full z-10">
-          <div className="w-full">
+        <nav className="shadow-lg w-full z-10">
+          <div className="w-full bg-purple-900">
             <div className="flex items-center h-[10vh] w-full">
               <div className="flex items-center  mx-20  justify-between w-full">
                 <div className="flex justify-center items-center flex-shrink-0 ">
@@ -44,7 +44,7 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
                   </div>
                 </div>
               </div>
-              <div className="mr-10 flex md:hidden ">
+              <div className="mr-20 flex md:hidden ">
                 <button
                   onClick={() => setIsOpen(!isOpen)}
                   type="button"
@@ -62,40 +62,42 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
               </div>
             </div>
           </div>
-          <Transition
-            show={isOpen}
-            enter="transition ease-out duration-100 transform"
-            enterFrom="opacity-0 scale-95"
-            enterTo="opacity-100 scale-100"
-            leave="transition ease-in duration-75 transform"
-            leaveFrom="opacity-100 scale-100"
-            leaveTo="opacity-0 scale-95"
-          >
-            {(ref) => (
-              <div className="md:hidden" id="mobile-menu">
-                <div
-                  ref={ref}
-                  className="flex flex-col bg-white px-2 pt-2 pb-3 space-y-1 sm:px-3"
-                >
-                  {MenuItems.map(({ name, label }, index) => (
-                    <Link
-                      key={index}
-                      href={`/${name}`}
-                      scroll={false}
-                      className={`${router.pathname == `/${name}`
-                        ? 'text-blue-500'
-                        : 'text-black'
-                        } cursor-pointer hover:bg-blue-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium`}
-                    >
-                      {label}
-                    </Link>
-                  ))}
+          <div className='absolute w-full right-0'>
+            <Transition
+              show={isOpen}
+              enter="transition ease-out duration-100 transform"
+              enterFrom="opacity-0 scale-95"
+              enterTo="opacity-100 scale-100"
+              leave="transition ease-in duration-75 transform"
+              leaveFrom="opacity-100 scale-100"
+              leaveTo="opacity-0 scale-95"
+            >
+              {(ref) => (
+                <div className="md:hidden" id="mobile-menu">
+                  <div
+                    ref={ref}
+                    className="flex flex-col bg-purple-900 shadow-lg px-20 pt-2 pb-10 space-y-1 sm:px-20"
+                  >
+                    {MenuItems.map(({ name, label }, index) => (
+                      <Link
+                        key={index}
+                        href={`/${name}`}
+                        scroll={false}
+                        className={`${router.pathname == `/${name}`
+                          ? 'text-blue-500'
+                          : 'text-white'
+                          } cursor-pointer hover:bg-blue-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium`}
+                      >
+                        {label}
+                      </Link>
+                    ))}
 
-                  
+
+                  </div>
                 </div>
-              </div>
-            )}
-          </Transition>
+              )}
+            </Transition>
+          </div>
         </nav>
       </div>
     </header>
