@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Transition } from '@headlessui/react';
+import { FaToggleOff, FaToggleOn } from 'react-icons/fa';
 import { MenuItems } from '../MenuItems';
 
 export interface IHeader extends React.ComponentPropsWithoutRef<'header'> { }
@@ -53,9 +54,9 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
                 >
                   <span className="sr-only">Open main menu</span>
                   {!isOpen ? (
-                    <i className="fas fa-toggle-off"></i>
+                    <FaToggleOff />
                   ) : (
-                    <i className="fas fa-toggle-on"></i>
+                    <FaToggleOn />
                   )}
                 </button>
               </div>
