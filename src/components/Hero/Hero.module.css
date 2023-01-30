@@ -1,0 +1,5 @@
+.socialIcons>.icon:hover {
+    color: white;
+    background-color: red;
+    cursor: pointer;
+}
