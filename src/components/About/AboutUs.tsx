@@ -16,7 +16,7 @@ const AboutUs: React.FC<IAboutUs> = ({ className, ...sectionProps }) => {
         <Image src="/about-us-transparent.png" alt="group photo" width='600' height='600' />
       </div>
       <div className='flex flex-col gap-4'>
-        <p>Our Achievements</p>
+        <p className='text-white'>Our Achievements</p>
         <h1 className='text-3xl font-semibold text-white'>Stuff about us</h1>
         <p className='text-gray-400'>We are the best digital agency specialized in social media marketing. Our team is comprised of experts in the field who use innovative strategies to help businesses succeed in the ever-evolving world of social media. Trust us to enhance your online presence and drive real results for your brand.</p>
         <div className='grid xs:grid-cols-1 sm:grid-cols-2 gap-4'>
