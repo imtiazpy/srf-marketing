@@ -4,6 +4,7 @@ import { NextPageWithLayout } from './page'
 import Layout from '@/components/Layout/Layout'
 import Hero from '@/components/Hero/Hero'
 import CompanyPhilosophy from '@/components/CompanyPhilosophy/CompanyPhilosophy'
+import AboutUs from '@/components/About/AboutUs'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -13,6 +14,7 @@ const Home: NextPageWithLayout = () => {
     <>
       <Hero />
       <CompanyPhilosophy />
+      <AboutUs />
     </>
   );
 };
