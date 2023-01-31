@@ -13,9 +13,10 @@ const TeamCard: React.FC<ITeamCard> = ({ image, name, designation, className, ..
       <div className='w-48 h-48 relative'>
         <Image priority className='rounded-full object-cover' fill src={image} alt='Photo of Team member' />
       </div>
-      <div className='flex flex-col items-center'>
+      <div className='flex flex-col items-center gap-2'>
         <h4>{name}</h4>
         <p>{designation}</p>
+        <button className='text-xs border rounded-lg p-1 hover:bg-yellow-700'>See Bio</button>
       </div>
     </div>
   );
