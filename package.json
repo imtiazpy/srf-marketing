@@ -1,5 +1,7 @@
 {
   "name": "srf-marketing",
+  "author": "Imtiaz Ahmed",
+  "description": "Company website for Social Media Marketing Agency",
   "version": "0.1.0",
   "private": true,
   "scripts": {
