@@ -8,7 +8,7 @@ export interface IHero extends React.ComponentPropsWithoutRef<'section'> {
 
 }
 
-const Hero: React.FC<IHero> = ({className, ...sectionProps}) => {
+const Hero: React.FC<IHero> = ({ className, ...sectionProps }) => {
 
   const iconStyle = { border: '1px solid blue', borderRadius: '50%', padding: '5px', fontSize: '28px' }
 
@@ -33,7 +33,7 @@ const Hero: React.FC<IHero> = ({className, ...sectionProps}) => {
       </div>
       <div className='flex flex-col'>
         <div>
-          <Image src="/Hero-triangle.png" alt="consistency content engagement" width='600' height='600' />
+          <Image priority style={{width: 'auto', height: 'auto'}} src="/Hero-triangle.png" alt="consistency content engagement" width={600} height={600} />
         </div>
         <div className={`${styles.socialIcons} ${styles.heroImage} flex justify-end items-end gap-2`}>
           <FaTwitter

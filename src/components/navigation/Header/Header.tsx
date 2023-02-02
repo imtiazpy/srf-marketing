@@ -73,10 +73,9 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              {(ref) => (
+              {
                 <div className="md:hidden" id="mobile-menu">
                   <div
-                    ref={ref}
                     className={`${styles.bgTransparent} flex flex-col shadow-lg px-20 pt-2 pb-10 space-y-1 sm:px-20`}
                   >
                     {MenuItems.map(({ name, label }, index) => (
@@ -96,7 +95,7 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
 
                   </div>
                 </div>
-              )}
+              }
             </Transition>
           </div>
         </nav>

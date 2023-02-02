@@ -40,7 +40,7 @@ const CardFront: React.FC<ITeamCard> = ({ image, name, designation, bio, classNa
   return (
     <div className={`absolute inset-0 flex flex-col items-center border-2 border-purple-600 rounded-lg text-white py-4 gap-4 shadow-lg shadow-red-500/50 cursor-pointer [backface-visibility:hidden] ${styles.cardFront}`}>
       <div className='w-48 h-48 relative'>
-        <Image priority className='rounded-full object-cover' fill src={image} alt='Photo of Team member' />
+        <Image className='rounded-full object-cover' fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' src={image} alt='Photo of Team member' />
       </div>
       <div className='flex flex-col items-center gap-2'>
         <h4>{name}</h4>

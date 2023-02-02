@@ -18,8 +18,8 @@ const OurServices: React.FC<IOurServices> = ({ className, ...sectionProps }) => 
       <p className='text-gray-100'>We provide best ever services for your great experience. We make all the efforts for the revolutionary change. We appreciate our employees to create future. We promise you that, you will never get disappointed.</p>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
         {
-          servicesData.map(({ icon, title, content }) => (
-            <ServiceCard icon={icon} title={title} content={content} />
+          servicesData.map(({ id, icon, title, content }) => (
+            <ServiceCard key={id} icon={icon} title={title} content={content} />
           ))
         }
       </div>
