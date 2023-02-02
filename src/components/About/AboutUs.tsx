@@ -13,7 +13,7 @@ const AboutUs: React.FC<IAboutUs> = ({ className, ...sectionProps }) => {
   return (
     <section className='px-20 py-10 grid grid-cols-1 md:grid-cols-2 bg-purple-900 object-cover gap-10'>
       <div>
-        <Image src="/about-us-transparent.png" alt="group photo" width='600' height='600' />
+        <Image priority style={{width: 'auto', height: 'auto'}} src="/about-us-transparent.png" alt="group photo" width='600' height='600' />
       </div>
       <div className='flex flex-col gap-4'>
         <p className='text-white'>Our Achievements</p>
