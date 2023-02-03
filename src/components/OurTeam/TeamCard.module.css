@@ -1,8 +1,20 @@
+.scene {
+    perspective: 1000px;
+}
+
 .cardFront {
     background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: rotateX(0deg); /* this is required for firefox: To make the backface:hidden */
 }
 
 .cardBack {
     background-color: rgba(20, 0, 0, 0.2);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(5px);
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }

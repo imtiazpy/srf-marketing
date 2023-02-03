@@ -18,7 +18,7 @@ const TeamCard: React.FC<ITeamCard> = ({ image, name, designation, bio, classNam
     setFlipped(!flipped)
   }
   return (
-    <div className="group h-80 [perspective: 1000px]">
+    <div className={`${styles.scene} group h-80`}>
 
       <div onClick={flip} className={`relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] ${flipped ? '[transform:rotateY(180deg)]' : ''}`}>
 
@@ -38,9 +38,9 @@ export default TeamCard;
 
 const CardFront: React.FC<ITeamCard> = ({ image, name, designation, bio, className, ...divProps }) => {
   return (
-    <div className={`absolute inset-0 flex flex-col items-center border-2 border-purple-600 rounded-lg text-white py-4 gap-4 shadow-lg shadow-red-500/50 cursor-pointer [backface-visibility:hidden] ${styles.cardFront}`}>
+    <div className={`absolute inset-0 flex flex-col items-center border-2 border-purple-600 rounded-lg text-white py-4 gap-4 shadow-lg shadow-red-500/50 cursor-pointer ${styles.cardFront}`}>
       <div className='w-48 h-48 relative'>
-        <Image className='rounded-full object-cover' fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' src={image} alt='Photo of Team member' />
+        <Image src={image} className='rounded-full object-cover' fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' alt='Photo of Team member' />
       </div>
       <div className='flex flex-col items-center gap-2'>
         <h4>{name}</h4>
@@ -54,7 +54,7 @@ const CardFront: React.FC<ITeamCard> = ({ image, name, designation, bio, classNa
 
 const CardBack: React.FC<ITeamCard> = ({ image, name, designation, bio, className, ...divProps }) => {
   return (
-    <div className={`absolute inset-0 flex flex-col items-center justify-center border-2 border-purple-600 rounded-lg text-white py-4 gap-4 shadow-lg shadow-red-500/50 cursor-pointer [transform:rotateY(180deg)] [backface-visibility:hidden] ${styles.cardBack}`}>
+    <div className={`absolute inset-0 flex flex-col items-center justify-center border-2 border-purple-600 rounded-lg text-white py-4 gap-4 shadow-lg shadow-red-500/50 cursor-pointer [transform:rotateY(180deg)] ${styles.cardBack}`}>
       <div className="flex flex-col items-center justify-start px-1 gap-2 mt-2">
         <h1 className="text-xl font-bold">{name}</h1>
         <p className="text-base">{bio}</p>
