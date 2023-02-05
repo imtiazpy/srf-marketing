@@ -28,7 +28,7 @@ const OurWorks: React.FC<IOurWorks> = ({ className, ...sectionProps }) => {
     <section className='px-20 py-10 bg-violet-600/70'>
       <p className='py-1 px-2 bg-blue-600/50 text-sm inline-block'>Our Projects</p>
       <div className='flex flex-col lg:flex-row items-center justify-between'>
-        <h1 className='text-[48px] font-medium w-[50vw]'>Some of our finest work</h1>
+        <h1 className='text-[28px] md:text-[48px] font-medium w-[50vw]'>Some of our finest work</h1>
         <div className='flex items-center justify-around w-[40vw]'>
           {menuItems.map((val, id) => (
             <div>
@@ -55,7 +55,7 @@ const OurWorks: React.FC<IOurWorks> = ({ className, ...sectionProps }) => {
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-10'>
         {items.map(({ image, title, category, id }) => (
           <div key={id} className='flex flex-col gap-8 h-[300px]'>
-            <div className={`${styles.imageBorder} relative w-full h-full`}>
+            <div className={`${styles.imageContainer} relative w-full h-full`}>
               <Image className='object-cover' src={image} alt='Image of work' fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' />
               <div className={`${styles.border}`}></div>
             </div>
@@ -68,7 +68,7 @@ const OurWorks: React.FC<IOurWorks> = ({ className, ...sectionProps }) => {
         }
       </div>
       <div className='mt-10 text-center'>
-        <button className={`${styles.btn} ${styles.btnAnimated}`}>More Projects</button>
+        <button className={`${styles.btn} ${styles.btnAnimated} text-sm md:text-base`}>More Projects</button>
       </div>
     </section>
   );
