@@ -8,6 +8,7 @@ import AboutUs from '@/components/About/AboutUs'
 import OurClient from '@/components/OurClient/OurClient'
 import OurTeam from '@/components/OurTeam/OurTeam'
 import OurServices from '@/components/OurServices/OurServices'
+import OurWorks from '@/components/OurWorks/OurWorks'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -21,6 +22,7 @@ const Home: NextPageWithLayout = () => {
       <OurClient />
       <OurTeam />
       <OurServices />
+      <OurWorks />
     </>
   );
 };
