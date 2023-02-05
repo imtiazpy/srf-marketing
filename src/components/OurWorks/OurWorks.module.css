@@ -1,0 +1,99 @@
+.filterBtn {
+    color: black;
+    position: relative;
+    height: 80px;
+    z-index: 2;
+    perspective: 1000px;
+}
+
+.filterBtn.selected {
+    color: white;
+}
+
+.filterBtn.selected::after {
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    content: "";
+    z-index: -1;
+    transform-style: preserve-3d;
+    transform: rotateY(-40deg);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.imageContainer {
+    position: relative;
+}
+
+.border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -20px;
+    top: 20px;
+    z-index: -10;
+    transition: all 0.3s ease-in-out;
+}
+
+.imageContainer:hover .border {
+    border: 4px solid black;
+}
+
+
+.btn {
+    position: relative;
+    padding: 1em 1.5em;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    margin: 1em 0.8em;
+}
+
+.btnAnimated {
+    color: rgb(17, 17, 39);
+}
+
+.btnAnimated::after,
+.btnAnimated::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    border: 2px solid;
+    transition: all 0.6s ease;
+    border-radius: 2px;
+}
+
+.btnAnimated::after {
+    bottom: 0;
+    right: 0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: rgb(17, 17, 39);
+    border-right-color: rgb(17, 17, 39);
+}
+
+.btnAnimated::before {
+    top: 0;
+    left: 0;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-top-color: rgb(17, 17, 39);
+    border-left-color: rgb(17, 17, 39);
+}
+
+.btnAnimated:hover::after,
+.btnAnimated:hover::before {
+    border-bottom-color: rgb(17, 17, 39);
+    border-right-color: rgb(17, 17, 39);
+    border-top-color: rgb(17, 17, 39);
+    border-left-color: rgb(17, 17, 39);
+    width: 105%;
+    height: 110%;
+}
