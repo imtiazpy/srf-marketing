@@ -18,8 +18,8 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
       <div>
         <nav className="shadow-lg z-50 fixed w-full top-0">
           <div className={`w-full ${styles.bgTransparent}`}>
-            <div className="flex items-center h-[10vh] w-full">
-              <div className="flex items-center  mx-20  justify-between w-full">
+            <div className="flex items-center h-[10vh] w-full px-2 sm:px-10 md:px-20">
+              <div className="flex items-center justify-between w-full">
                 <div className="flex justify-center items-center flex-shrink-0 ">
                   <h1 className=" font-bold text-xl cursor-pointer">
                     <Link href="/" scroll={false}>
@@ -45,7 +45,7 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
                   </div>
                 </div>
               </div>
-              <div className="mr-20 flex md:hidden ">
+              <div className="flex md:hidden ">
                 <button
                   onClick={() => setIsOpen(!isOpen)}
                   type="button"
@@ -76,7 +76,7 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
               {
                 <div className="md:hidden" id="mobile-menu">
                   <div
-                    className={`${styles.bgTransparent} flex flex-col shadow-lg px-20 pt-2 pb-10 space-y-1 sm:px-20`}
+                    className={`${styles.bgTransparent} flex flex-col shadow-lg px-2 sm:px-10 md:px-20 pt-2 pb-10 space-y-1`}
                   >
                     {MenuItems.map(({ name, label }, index) => (
                       <Link

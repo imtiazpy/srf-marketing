@@ -12,7 +12,7 @@ export interface IOurServices extends React.ComponentPropsWithoutRef<'section'> 
 
 const OurServices: React.FC<IOurServices> = ({ className, ...sectionProps }) => {
   return (
-    <section className={`${styles.bgImage} flex flex-col gap-4 px-20 py-10`}>
+    <section className={`${styles.bgImage} flex flex-col gap-4 px-2 sm:px-10 md:px-20 py-10`}>
       <span className='text-red-500'>We work for your best experience</span>
       <h1 className='text-3xl font-bold text-white'>Our Services</h1>
       <p className='text-gray-100'>We provide best ever services for your great experience. We make all the efforts for the revolutionary change. We appreciate our employees to create future. We promise you that, you will never get disappointed.</p>

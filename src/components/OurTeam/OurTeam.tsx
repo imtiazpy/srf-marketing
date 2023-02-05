@@ -13,7 +13,7 @@ export interface IOurTeam extends React.ComponentPropsWithoutRef<'section'> {
 
 const OurTeam: React.FC<IOurTeam> = ({ className, ...sectionProps }) => {
   return (
-    <section className={`${styles.bgImage} px-20 py-10 flex flex-col gap-6 `}>
+    <section className={`${styles.bgImage} px-2 sm:px-10 md:px-20 py-10 flex flex-col gap-6 `}>
       <div className='flex flex-col gap-2'>
         <span className='text-red-600'>Specials behind great work</span>
         <h1 className='text-3xl font-semibold text-white'>Meet our Team</h1>

@@ -8,7 +8,7 @@ export interface ICompanyPhilosophy extends React.ComponentPropsWithoutRef<'sect
 
 const CompanyPhilosophy: React.FC<ICompanyPhilosophy> = ({ className, ...sectionProps }) => {
     return (
-        <section className='px-20 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 items-center justify-between bg-purple-700 text-white'>
+        <section className='px-2 sm:px-10 md:px-20 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 items-center justify-between bg-purple-700 text-white'>
             <PhilosophyItem 
                 title='Vision'
                 icon={<FaBookmark />}
