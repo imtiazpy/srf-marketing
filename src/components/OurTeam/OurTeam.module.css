@@ -1,8 +1,8 @@
 .bgImage {
     background-image:
         /* top, transparent red */
-        linear-gradient(rgba(0, 0, 0, 0.65),
-            rgba(63, 143, 235, 0.65)),
+        linear-gradient(rgba(44, 0, 0, 0.65),
+            rgba(76, 143, 221, 0.65)),
         /* your image */
         url('/ourTeam.jpg');
     min-height: 400px;
