@@ -1,3 +1,57 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn {
+    position: relative;
+    padding: 1em 1.5em;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    margin: 1em 0.8em;
+}
+
+.btnAnimated {
+    color: rgb(17, 17, 39);
+}
+
+.btnAnimated::after,
+.btnAnimated::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    border: 2px solid;
+    transition: all 0.6s ease;
+    border-radius: 2px;
+}
+
+.btnAnimated::after {
+    bottom: 0;
+    right: 0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: rgb(17, 17, 39);
+    border-right-color: rgb(17, 17, 39);
+}
+
+.btnAnimated::before {
+    top: 0;
+    left: 0;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-top-color: rgb(17, 17, 39);
+    border-left-color: rgb(17, 17, 39);
+}
+
+.btnAnimated:hover::after,
+.btnAnimated:hover::before {
+    border-bottom-color: rgb(17, 17, 39);
+    border-right-color: rgb(17, 17, 39);
+    border-top-color: rgb(17, 17, 39);
+    border-left-color: rgb(17, 17, 39);
+    width: 105%;
+    height: 110%;
+}

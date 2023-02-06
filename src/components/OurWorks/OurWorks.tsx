@@ -67,7 +67,7 @@ const OurWorks: React.FC<IOurWorks> = ({ className, ...sectionProps }) => {
         }
       </div>
       <div className='mt-10 text-center'>
-        <button className={`${styles.btn} ${styles.btnAnimated} text-sm md:text-base`}>More Projects</button>
+        <button className={`btn btnAnimated text-sm md:text-base`}>More Projects</button>
       </div>
     </section>
   );
