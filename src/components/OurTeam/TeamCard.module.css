@@ -1,20 +1,67 @@
 .scene {
     perspective: 1000px;
+    box-shadow: 3px 3px 10px rgb(124, 8, 153);
+    box-sizing: border-box;
 }
 
-.cardFront {
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
+.card {
+    transition: transform 2s ease;
+    transform-style: preserve-3d;
+    
+}
+
+.card__front,
+.card__back {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    inset: 0;
+    border-radius: 10px;
+    color: white;
     backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.card__front {
+    /* backdrop-filter: blur(5px); */
     transform: rotateX(0deg); /* this is required for firefox: To make the backface:hidden */
 }
 
-.cardBack {
-    background-color: rgba(20, 0, 0, 0.2);
-    backdrop-filter: blur(5px);
-    backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+.card__back {
+    backdrop-filter: blur(5px);  
+}
+
+.card__front::before {
+    content: '';
+    position: absolute;
+    --spacer: 1em;
+    top: 1em;
+    bottom: 1em;
+    left: 1em;
+    right: 1em;
+    border: 3px solid rgb(34, 0, 5);
+    border-radius: 10px;
+    transform: translateZ(2rem);
+}
+
+
+.card__front__image {
+    transform: translateZ(3.5rem) scale(0.95);
+}
+
+.card__front__content {
+    transform: translateZ(4.5rem);
+    overflow: hidden;
+    font-size: smaller;
+}
+
+.card__back__content {
+    overflow: hidden;
+    font-size: smaller;
 }
