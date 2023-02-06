@@ -20,7 +20,7 @@ const Hero: React.FC<IHero> = ({ className, ...sectionProps }) => {
           Maximize your brand's potential with our full-service marketing agency. With a focus on strategy, creativity, and results, we help businesses reach new heights. Partner with us and experience the power of a dynamic and effective marketing campaign.
         </p>
         <div className='flex gap-4'>
-          <button className='flex items-center border-2 border-blue-600 py-1 px-4'>
+          <button className='btn btnAnimated flex items-center border-2 border-blue-600 py-1 px-4'>
             Get Started <FaAngleRight />
           </button>
           <div className='flex items-center gap-2'>
