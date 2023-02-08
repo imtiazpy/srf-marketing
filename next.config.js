@@ -10,6 +10,10 @@ const nextConfig = {
         // port: '8000',
         // pathname: '/media/avatars/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'via.placeholder.com'
+      }
     ],
   },
 }
