@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* Utility classes */
+
 .btn {
     position: relative;
     padding: 1em 1.5em;
@@ -54,6 +57,13 @@
     border-left-color: rgb(17, 17, 39);
     width: 105%;
     height: 110%;
+}
+
+.green {
+    color: #01be96;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 
