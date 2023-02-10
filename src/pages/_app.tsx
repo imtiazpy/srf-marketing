@@ -3,6 +3,9 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { NextPageWithLayout } from './page'
 
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 interface AppPropsWithLayout extends AppProps {
   Component: NextPageWithLayout;
 }
