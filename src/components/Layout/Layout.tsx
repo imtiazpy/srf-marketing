@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../Footer/Footer';
 import Header from '../navigation/Header/Header';
 
 
@@ -11,6 +12,7 @@ const Layout: React.FC<ILayout> = ({ children, ...divProps }) => {
     <>
       <Header />
       <main className="flex-grow relative top-[10vh]">{children}</main>
+      <Footer />
     </>
   );
 };
