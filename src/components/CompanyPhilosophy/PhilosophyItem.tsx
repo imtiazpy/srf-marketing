@@ -9,7 +9,7 @@ export interface IPhilosophyItem extends React.ComponentPropsWithoutRef<'div'> {
 const PhilosophyItem: React.FC<IPhilosophyItem> = ({ className, title, icon, content, ...divProps }) => {
   return (
     <div>
-      <div className='flex flex-col gap-4 px-10 mb-20'>
+      <div className='flex flex-col gap-4 px-10 mb-20 h-28'>
         <div className='flex items-center gap-2'>
           {icon}
           {title}
@@ -18,7 +18,7 @@ const PhilosophyItem: React.FC<IPhilosophyItem> = ({ className, title, icon, con
           <p className='text-sm'>{content}</p>
         </div>
       </div>
-      <hr />
+      <hr style={{border: '1px solid black'}} />
     </div>
   );
 };

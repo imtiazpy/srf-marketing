@@ -4,7 +4,7 @@
         linear-gradient(rgba(0, 0, 0, 0.65),
             rgba(59, 2, 82, 0.65)),
         /* your image */
-        url('/services-bg.jpg');
+        url('/ourTeam.jpg');
     min-height: 400px;
     background-attachment: fixed;
     background-position: center;

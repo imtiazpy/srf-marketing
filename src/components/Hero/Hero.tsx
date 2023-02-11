@@ -13,9 +13,10 @@ const Hero: React.FC<IHero> = ({ className, ...sectionProps }) => {
   const iconStyle = { border: '1px solid blue', borderRadius: '50%', padding: '5px', fontSize: '28px' }
 
   return (
-    <section className={`h-auto md:h-[90vh] grid grid-cols-1 md:grid-cols-2 py-10 md:py-20 bg-purple-900 px-2 sm:px-10 md:px-20 items-center`}>
-      <div className='flex flex-col gap-8 text-white'>
-        <h1 className='text-3xl'>We are <span className='text-red-600'>Creative Agency</span></h1>
+    <section className={`h-auto md:h-[90vh] grid grid-cols-1 md:grid-cols-2 py-10 md:py-20 bg-slate-100 px-2 sm:px-10 md:px-20 items-center`}>
+      <div className='flex flex-col gap-8 text-black'>
+        <h1 className='text-6xl'>We are</h1> 
+        <span className='text-6xl uppercase text-[#01be96]'>Creative Agency</span>
         <p>
           Maximize your brand's potential with our full-service marketing agency. With a focus on strategy, creativity, and results, we help businesses reach new heights. Partner with us and experience the power of a dynamic and effective marketing campaign.
         </p>
