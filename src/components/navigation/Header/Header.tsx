@@ -22,7 +22,7 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
               <div className="flex items-center justify-between w-full">
                 <div className="flex justify-center items-center flex-shrink-0 ">
                   <h1 className=" font-bold text-xl cursor-pointer">
-                    <Link href="/" scroll={false} className='uppercase'>
+                    <Link href="/" scroll={false} className='uppercase text-sm xs:text-base sm:text-xl'>
                       Marketing<span className="text-[#01be96]">Agency</span>
                     </Link>
                   </h1>
