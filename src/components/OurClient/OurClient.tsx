@@ -16,7 +16,7 @@ const OurClient: React.FC<IOurClient> = ({ className, ...sectionProps }) => {
         <Info title='5000+' info='Completed Projects' />
         <Info title='1000+' info='Creative Employees' />
       </div>
-      <div className='flex items-center justify-around flex-wrap gap-4 py-10 px-2 sm:px-10 md:px-20'>
+      <div className='flex items-center justify-around flex-wrap gap-4 py-10 px-2 sm:px-5 md:px-10'>
         <Image style={{width: 'auto', height: 'auto'}} src='/logoipsum-284.svg' alt='company logo' width={80} height={20} />
         <Image style={{width: 'auto', height: 'auto'}} src='/logoipsum-285.svg' alt='company logo' width={150} height={20} />
         <Image style={{width: 'auto', height: 'auto'}} src='/logoipsum-286.svg' alt='company logo' width={150} height={20} />
