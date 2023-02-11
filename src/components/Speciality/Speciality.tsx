@@ -9,7 +9,7 @@ const Speciality = () => {
   const [data, setData] = useState(specialData)
 
   return (
-    <section className='h-auto md:h-[90vh] px-2 sm:px-10 md:px-20 py-10 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-4 bg-slate-100'>
+    <section className='h-auto md:h-[90vh] px-2 sm:px-5 md:px-10 py-10 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-4 bg-slate-100'>
       <div className='flex flex-col gap-8'>
         <div className='flex flex-col gap-2'>
           <h1 className='text-3xl font-bold order-2 text-black'>What makes us special?</h1>

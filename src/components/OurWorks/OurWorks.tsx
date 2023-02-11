@@ -25,10 +25,10 @@ const OurWorks: React.FC<IOurWorks> = ({ className, ...sectionProps }) => {
   }
 
   return (
-    <section className='px-2 sm:px-10 md:px-20 py-10 bg-slate-200'>
-      <p className='py-1 px-2 bg-blue-600/50 text-sm inline-block'>Our Projects</p>
+    <section className='px-2 sm:px-5 md:px-10 py-10 bg-slate-200'>
+      <p className='green'>Our Projects</p>
       <div className='flex flex-col lg:flex-row items-center justify-between'>
-        <h1 className='text-[28px] md:text-[48px] font-medium w-[50vw]'>Some of our finest work</h1>
+        <h1 className='text-3xl font-bold w-[50vw]'>Some of our finest work</h1>
         <div className='flex items-center justify-around w-[40vw]'>
           {menuItems.map((val, index) => (
             <div key={index}>

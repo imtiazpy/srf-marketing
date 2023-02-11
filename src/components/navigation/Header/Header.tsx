@@ -18,12 +18,12 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
       <div>
         <nav className="shadow-lg z-50 fixed w-full top-0">
           <div className={`w-full ${styles.bgTransparent}`}>
-            <div className="flex items-center h-[10vh] w-full px-2 sm:px-10 md:px-20">
+            <div className="flex items-center h-[10vh] w-full px-2 sm:px-5 md:px-10">
               <div className="flex items-center justify-between w-full">
                 <div className="flex justify-center items-center flex-shrink-0 ">
                   <h1 className=" font-bold text-xl cursor-pointer">
-                    <Link href="/" scroll={false}>
-                      Marketing<span className="text-blue-600">Agency</span>
+                    <Link href="/" scroll={false} className='uppercase'>
+                      Marketing<span className="text-[#01be96]">Agency</span>
                     </Link>
                   </h1>
                 </div>

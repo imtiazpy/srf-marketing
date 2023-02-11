@@ -13,7 +13,7 @@ const Hero: React.FC<IHero> = ({ className, ...sectionProps }) => {
   const iconStyle = { border: '1px solid blue', borderRadius: '50%', padding: '5px', fontSize: '28px' }
 
   return (
-    <section className={`h-auto md:h-[90vh] grid grid-cols-1 md:grid-cols-2 py-10 md:py-20 bg-slate-100 px-2 sm:px-10 md:px-20 items-center`}>
+    <section className={`h-auto md:h-[90vh] grid grid-cols-1 md:grid-cols-2 py-10 md:py-20 bg-slate-100 px-2 sm:px-5 md:px-10 items-center`}>
       <div className='flex flex-col gap-8 text-black'>
         <h1 className='text-6xl'>We are</h1> 
         <span className='text-6xl uppercase text-[#01be96]'>Creative Agency</span>
