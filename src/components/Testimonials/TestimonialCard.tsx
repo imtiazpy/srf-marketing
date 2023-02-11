@@ -47,6 +47,7 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: space-around;
   border-radius: 5px;
+  cursor: pointer;
 
   .quote {
     margin-bottom: 0.5rem;

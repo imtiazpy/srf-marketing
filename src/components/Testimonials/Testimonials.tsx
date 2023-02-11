@@ -10,9 +10,9 @@ export interface ITestimonials extends React.ComponentPropsWithoutRef<'section'>
 const Testimonials: React.FC<ITestimonials> = ({ className, ...sectionProps }) => {
 
   return (
-    <Container className='h-auto md:h-[90vh] px-2 sm:px-10 md:px-20 py-10 md:py-20 bg-violet-600/70'>
+    <Container className='h-auto md:h-[90vh] px-2 sm:px-10 md:px-20 py-10 md:py-20 bg-slate-200'>
       <div className='flex flex-col gap-2 mb-4'>
-        <h1 className='text-3xl font-bold order-2 text-white'>
+        <h1 className='text-3xl font-bold order-2 text-black'>
           What clients have been saying about our services
         </h1>
         <span className="green">TESTIMONIALS</span>
