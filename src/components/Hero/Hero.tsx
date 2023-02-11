@@ -15,8 +15,8 @@ const Hero: React.FC<IHero> = ({ className, ...sectionProps }) => {
   return (
     <section className={`h-auto md:h-[90vh] grid grid-cols-1 md:grid-cols-2 py-10 md:py-20 bg-slate-100 px-2 sm:px-5 md:px-10 items-center`}>
       <div className='flex flex-col gap-8 text-black'>
-        <h1 className='text-6xl'>We are</h1> 
-        <span className='text-6xl uppercase text-[#01be96]'>Creative Agency</span>
+        <h1 className='text-4xl sm:text-6xl'>We are</h1> 
+        <span className='text-4xl sm:text-6xl uppercase text-[#01be96]'>Creative Agency</span>
         <p>
           Maximize your brand's potential with our full-service marketing agency. With a focus on strategy, creativity, and results, we help businesses reach new heights. Partner with us and experience the power of a dynamic and effective marketing campaign.
         </p>
