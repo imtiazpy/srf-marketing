@@ -11,7 +11,7 @@ export interface IAboutUs extends React.ComponentPropsWithoutRef<'section'> {
 
 const AboutUs: React.FC<IAboutUs> = ({ className, ...sectionProps }) => {
   return (
-    <section className='h-auto md:h-[90vh] px-2 sm:px-5 md:px-10 py-10 md:py-20 grid grid-cols-1 md:grid-cols-2 bg-slate-100 object-cover gap-10'>
+    <section id='about' className='h-auto md:h-[90vh] px-2 sm:px-5 md:px-10 py-10 md:py-20 grid grid-cols-1 md:grid-cols-2 bg-slate-100 object-cover gap-10'>
       <div>
         <Image priority style={{width: 'auto', height: 'auto'}} src="/about-us-transparent.png" alt="group photo" width='600' height='600' />
       </div>

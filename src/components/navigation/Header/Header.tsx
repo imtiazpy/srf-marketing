@@ -22,7 +22,7 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
               <div className="flex items-center justify-between w-full">
                 <div className="flex justify-center items-center flex-shrink-0 ">
                   <h1 className=" font-bold text-xl cursor-pointer">
-                    <Link href="/" scroll={false} className='uppercase text-sm xs:text-base sm:text-xl'>
+                    <Link href="/#hero-section" scroll={false} className='uppercase text-sm xs:text-base sm:text-xl'>
                       Marketing<span className="text-[#01be96]">Agency</span>
                     </Link>
                   </h1>
@@ -32,12 +32,12 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
                     {MenuItems.map(({ name, label }, index) => (
                       <Link
                         key={index}
-                        href={`/${name}`}
+                        href={`/#${name}`}
                         scroll={false}
                         className={`${router.pathname == `/${name}`
                           ? 'text-blue-600'
                           : 'text-black'
-                          } cursor-pointer hover:bg-blue-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium`}
+                          } cursor-pointer hover:bg-[#01be96] hover:text-white px-3 py-2 rounded-md text-sm font-medium`}
                       >
                         {label}
                       </Link>

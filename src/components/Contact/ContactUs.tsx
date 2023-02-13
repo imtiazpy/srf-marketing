@@ -6,7 +6,7 @@ export interface IContactUs extends React.ComponentPropsWithoutRef<'section'> { 
 
 const ContactUs: React.FC<IContactUs> = ({ className, ...sectionProps }) => {
   return (
-    <Container className='h-auto px-2 sm:px-5 md:px-10 py-10 md:py-20 bg-slate-100'>
+    <Container id='contact' className='h-auto px-2 sm:px-5 md:px-10 py-10 md:py-20 bg-slate-100'>
       <Grid className='flex flex-col md:flex-row justify-between gap-8'>
         <Left>
           <div className="flex flex-col gap-4">
