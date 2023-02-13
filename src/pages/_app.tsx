@@ -5,6 +5,7 @@ import { NextPageWithLayout } from './page'
 
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import ScrollTop from '@/components/Buttons/ScrollTop';
 
 interface AppPropsWithLayout extends AppProps {
   Component: NextPageWithLayout;
@@ -23,6 +24,7 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className='min-h-screen flex flex-col'>
+        <ScrollTop />
         {getLayout(<Component {...pageProps} />)}
       </div>
     </>

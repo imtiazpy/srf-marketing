@@ -25,7 +25,7 @@ const OurWorks: React.FC<IOurWorks> = ({ className, ...sectionProps }) => {
   }
 
   return (
-    <section className='px-2 sm:px-5 md:px-10 py-10 bg-slate-200'>
+    <section id='projects' className='px-2 sm:px-5 md:px-10 py-10 bg-slate-200'>
       <p className='green'>Our Projects</p>
       <div className='flex flex-col lg:flex-row items-center justify-between'>
         <h1 className='text-3xl font-bold w-[50vw]'>Some of our finest work</h1>

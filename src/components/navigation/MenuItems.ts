@@ -1,18 +1,22 @@
 export const MenuItems = [
     {
-        name: 'item1',
-        label: 'Item-1'
+        name: 'about',
+        label: 'About-us'
     },
     {
-        name: 'item2',
-        label: 'Item-2'
+        name: 'team',
+        label: 'Our Team'
     },
     {
-        name: 'item3',
-        label: 'Item-3'
+        name: 'services',
+        label: 'Services'
     },
     {
-        name: 'item4',
-        label: 'Item-4'
+        name: 'projects',
+        label: 'Projects'
+    },
+    {
+        name: 'contact',
+        label: 'Contact'
     }
 ]
