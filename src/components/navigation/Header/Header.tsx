@@ -85,7 +85,7 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
                         scroll={false}
                         className={`${router.pathname == `/${name}`
                           ? 'text-blue-500'
-                          : 'text-white'
+                          : 'text-black'
                           } cursor-pointer hover:bg-blue-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium`}
                       >
                         {label}
