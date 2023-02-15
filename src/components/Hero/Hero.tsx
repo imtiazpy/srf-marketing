@@ -2,8 +2,6 @@ import React from 'react';
 import Image from 'next/image'
 import { FaAngleRight, FaPlayCircle, FaTwitter, FaInstagram, FaFacebookF } from 'react-icons/fa'
 import styles from './Hero.module.css';
-import ScrollTop from '../Buttons/ScrollTop';
-
 
 export interface IHero extends React.ComponentPropsWithoutRef<'section'> {
 
