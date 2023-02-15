@@ -36,7 +36,7 @@ const ScrollTop = () => {
   return (
     <ButtonTop 
       onClick={handleScrollTop}
-      className={`${!visible ? 'hidden' : 'bottom-10 right-10'} fixed bg-red-500 p-4 z-40 rounded-md text-white`}
+      className={`${!visible ? 'hidden' : 'bottom-10 right-10'} fixed bg-red-500 p-4 z-[100] rounded-full text-white`}
     >
       <Link
         href='/#hero-section'
