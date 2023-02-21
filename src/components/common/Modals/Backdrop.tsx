@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import { VscChromeClose } from 'react-icons/vsc';
 
 export interface IBackdrop extends React.ComponentPropsWithoutRef<'div'> {
   children: ReactNode;
@@ -17,6 +18,7 @@ const Backdrop: React.FC<IBackdrop> = ({ className, children, handleClick, ...di
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
+        <VscChromeClose onClick={handleClick} size='24px' className='absolute  bottom-16 md:bottom-20 right-[50%] cursor-pointer' />
         {children}
       </motion.div>
     </BackdropContainer>
@@ -37,5 +39,6 @@ const BackdropContainer = styled.div`
     align-items: center;
     justify-content: center;
     overflow-y: hidden;
+    cursor: pointer;
   }
 `

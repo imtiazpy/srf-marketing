@@ -35,17 +35,17 @@ const DropInModals: React.FC<IDropInModals> = ({ className, btnText, children, .
     setModalOpen(!modalOpen);
   }
   return (
-    <div>
+    <>
       <motion.button
-        whileHover={{ scale: 1.1 }}
+        whileHover={{ scale: 1.2 }}
         whileTap={{ scale: 0.9 }}
         onClick={toggleModal}
+        className='cursor-pointer'
       >
         {btnText}
       </motion.button>
       <AnimatePresence
         initial={false}
-        // exitBeforeEnter={true}
         mode='wait'
         onExitComplete={() => null}
       >
@@ -55,7 +55,7 @@ const DropInModals: React.FC<IDropInModals> = ({ className, btnText, children, .
           </Modal>
         }
       </AnimatePresence>
-    </div>
+    </>
   );
 };
 

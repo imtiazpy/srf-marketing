@@ -16,7 +16,7 @@ const Modal: React.FC<IModal> = ({ className, handleClose, type, children, ...di
       <Backdrop handleClick={handleClose}>
         <motion.div
           onClick={(e) => e.stopPropagation()}
-          className='modal orange-gradient'
+          className='modal'
           variants={type}
           initial="hidden"
           animate="visible"
@@ -35,15 +35,9 @@ const ModalContainer = styled.div`
   .modal {
     width: clamp(50%, 700px, 90%);
     height: min(70%, 400px);
-
     margin: auto;
-    // padding: 0 2rem;
-    // border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .orange-gradient {
-    // background: linear-gradient(10deg, #ffaa00, #ff6a00);
   }
 `
