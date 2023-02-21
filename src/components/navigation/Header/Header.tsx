@@ -18,12 +18,12 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
   return (
     <header {...headerProps}>
       <nav className="shadow-lg z-50 fixed w-full top-0">
-        <div className={`${styles.bgTransparent}`}>
+        <div>
           <div className="flex items-center h-[10vh] px-2 sm:px-5 md:px-10">
             <div className="flex items-center justify-between w-full">
               <div className="flex justify-center items-center flex-shrink-0 ">
                 <h1 className="font-bold text-xl cursor-pointer">
-                  <Link href="/#hero-section" scroll={false} className='uppercase text-sm xs:text-base sm:text-xl'>
+                  <Link href="/#hero-section" scroll={false} className='uppercase text-sm xs:text-base sm:text-xl text-white'>
                     Marketing<span className="text-[#01be96]">Agency</span>
                   </Link>
                 </h1>
@@ -37,7 +37,7 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
                       scroll={false}
                       className={`${router.pathname == `/${name}`
                         ? 'text-blue-600'
-                        : 'text-black'
+                        : 'text-white'
                         } cursor-pointer hover:bg-[#01be96] hover:text-white px-3 py-2 rounded-md text-sm font-medium`}
                     >
                       {label}
