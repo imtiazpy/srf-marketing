@@ -5,7 +5,6 @@ import { FaBars, FaRegWindowClose } from 'react-icons/fa';
 import styled from 'styled-components';
 
 import { MenuItems } from '../MenuItems';
-import styles from './Header.module.css';
 import MobileMenu from './MobileMenu';
 
 export interface IHeader extends React.ComponentPropsWithoutRef<'header'> { }

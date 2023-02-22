@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
+import StyledButton from '../Buttons/StyledButton';
 import { Data } from './data';
 import styles from './OurWorks.module.css';
 
@@ -67,7 +68,8 @@ const OurWorks: React.FC<IOurWorks> = ({ className, ...sectionProps }) => {
         }
       </div>
       <div className='mt-10 text-center'>
-        <button className={`btn btnAnimated text-sm md:text-base`}>More Projects</button>
+        {/* <button className={`text-sm md:text-base`}>More Projects</button> */}
+        <StyledButton title='More' />
       </div>
     </section>
   );

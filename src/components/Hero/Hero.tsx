@@ -25,14 +25,12 @@ const Hero: React.FC<IHero> = ({ className, ...sectionProps }) => {
         </p>
         <div className='flex flex-col md:flex-row gap-4'>
           <StyledButton title='Get Started' />
-          <div className='flex items-center justify-center gap-2'>
-            <DropInModals btnText={<FaPlayCircle size={'30px'} color='red' />}>
 
-              <iframe style={{ border: '0px' }} width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ" title="Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+          <DropInModals icon={<FaPlayCircle size={'30px'} color='red' />} btnText="Watch Video">
 
-            </DropInModals>
-            <p className='text-sm'>Play video</p>
-          </div>
+            <iframe style={{ border: '0px' }} width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ" title="Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+
+          </DropInModals>
         </div>
       </div>
       <div className={`${styles.socialIcons} ${styles.heroImage} flex justify-center items-center gap-2`}>

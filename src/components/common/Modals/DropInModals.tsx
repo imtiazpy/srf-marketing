@@ -3,7 +3,8 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Modal from './Modal';
 
 export interface IDropInModals extends React.ComponentPropsWithoutRef<'div'> {
-  btnText: any;
+  icon: ReactNode;
+  btnText: string;
   children: ReactNode;
 }
 
@@ -28,7 +29,7 @@ const dropIn = {
   },
 };
 
-const DropInModals: React.FC<IDropInModals> = ({ className, btnText, children, ...divProps }) => {
+const DropInModals: React.FC<IDropInModals> = ({ className, icon, btnText, children, ...divProps }) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const toggleModal = () => {
@@ -37,12 +38,18 @@ const DropInModals: React.FC<IDropInModals> = ({ className, btnText, children, .
   return (
     <>
       <motion.button
-        whileHover={{ scale: 1.2 }}
+        whileHover={{translateX: '5px'}}
         whileTap={{ scale: 0.9 }}
         onClick={toggleModal}
-        className='cursor-pointer'
+        className='flex items-center justify-center gap-2 border py-2 px-4 rounded-t-3xl rounded-bl-3xl bg-white/10 backdrop-blur-sm cursor-pointer'
       >
-        {btnText}
+        <motion.span
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          {icon}
+        </motion.span>
+        <span className='text-sm'>{btnText}</span>
       </motion.button>
       <AnimatePresence
         initial={false}
@@ -50,9 +57,11 @@ const DropInModals: React.FC<IDropInModals> = ({ className, btnText, children, .
         onExitComplete={() => null}
       >
         {modalOpen &&
+
           <Modal handleClose={toggleModal} type={dropIn}>
             {children}
           </Modal>
+
         }
       </AnimatePresence>
     </>

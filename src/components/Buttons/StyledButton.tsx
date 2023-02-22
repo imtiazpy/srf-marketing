@@ -38,6 +38,7 @@ const ButtonWrapper = styled.div`
     &:hover {
       .circle {
         width: 100%;
+        border-radius: 1.625rem 1.625rem 0 1.625rem;
       }
       .arrow {
         background: #fff;
