@@ -64,17 +64,15 @@ export default Footer;
 const FooterSection = styled.footer`
   position: relative;
   height: auto;
-  top: 10vh;
   color: white;
   display: flex;
   flex-direction: column;
   gap: 4rem;
   background-image:
-        /* top, transparent red */
-        linear-gradient(rgba(0, 0, 0, 0.65),
-            rgba(10, 0, 0, 0.65)),
-        /* your image */
-        url('/WorldMap.svg');
+    /* top, transparent red */
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(10, 0, 0, 0.65)),
+    /* your image */
+    url('/WorldMap.svg');
   min-height: 400px;
   background-attachment: scroll;
   background-position: center;

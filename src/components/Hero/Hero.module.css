@@ -1,6 +1,6 @@
 .hero {
     background-image:
-        /* top, transparent red */
+        /* top, transparent color */
         linear-gradient(rgba(0, 0, 0, 0.65),
             rgba(0, 0, 0, 0.65)),
         /* your image */

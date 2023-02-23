@@ -34,7 +34,7 @@ const Menu: React.FC<IMenu> = ({ className, type, ...dibProps }) => {
     <MenuContainer>
 
       <motion.ul
-        className={`px-2 sm:px-10 md:px-20 space-y-1 flex flex-col items-start h-full pt-[20vh] bg-[#05050562] backdrop-blur-[5px] gap-8 border-l-2 border-[#01be96]`}
+        className={`px-2 sm:px-10 md:px-20 space-y-1 flex flex-col items-start h-full pt-[20vh] bg-black/50 backdrop-blur-[5px] gap-8 border-l-2 border-[#01be96]`}
         variants={type}
         initial="hidden"
         animate="visible"

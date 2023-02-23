@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { FaBars, FaRegWindowClose } from 'react-icons/fa';
-import Menu from '../Menu';
 import { AnimatePresence } from 'framer-motion';
+import { FaBars, FaRegWindowClose } from 'react-icons/fa';
+
+import Menu from '../Menu';
+import BurgerButton from './BurgerButton';
+
 
 /* variant for framer-motion animation. */
 const slideInLeft = {
@@ -39,18 +42,13 @@ const slideInLeft = {
 const SliderMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
 
+  const toggleOpen = () => {
+    setIsOpen(!isOpen);
+  }
+
   return (
     <>
-      <MenuButton
-        onClick={() => setIsOpen(!isOpen)}
-        type="button"
-      >
-        {!isOpen ? (
-          <FaBars />
-        ) : (
-          <FaRegWindowClose />
-        )}
-      </MenuButton>
+      <BurgerButton isOpen={isOpen} toggleOpen={toggleOpen} />
       <AnimatePresence
         initial={false}
         mode='wait'
@@ -66,16 +64,3 @@ const SliderMenu = () => {
 };
 
 export default SliderMenu;
-
-const MenuButton = styled.button`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem;
-  border-radius: 0.375rem;
-  color: white;
-  z-index: 1000;
-  &:hover {
-    background-color: #01be96;
-  }
-`
