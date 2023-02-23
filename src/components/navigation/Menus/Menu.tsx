@@ -1,33 +1,38 @@
 import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 import { menuItems } from '../menuItems';
-
 import styles from './SliderMenu.module.css';
 
 export interface IMenu extends React.ComponentPropsWithoutRef<'div'> {
-  isOpen: Boolean;
+  // isOpen: Boolean;
+  type: any;
 }
 
-const Menu: React.FC<IMenu> = ({ className, isOpen, ...dibProps }) => {
+const Menu: React.FC<IMenu> = ({ className, type, ...dibProps }) => {
   return (
-    <MenuContainer className={`${styles.mobile__menu} ${isOpen ? styles.show : styles.hide}`}>
+    <MenuContainer>
 
-      <MenuItems
-        className={`px-2 sm:px-10 md:px-20 pt-2 pb-10 space-y-1`}
+      <motion.div
+        className={`px-2 sm:px-10 md:px-20 pb-10 space-y-1 flex flex-col items-start h-full pt-[10vh] bg-[#ece3f333] backdrop-blur-[5px] gap-4`}
+        variants={type}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
       >
         {menuItems.map(({ name, label }, index) => (
           <Link
             key={index}
             href={`/#${name}`}
             scroll={false}
-            className={`text-black cursor-pointer hover:bg-[#01be96] hover:text-white px-3 py-2 rounded-md text-sm font-medium`}
+            className={`text-black cursor-pointer hover:bg-[#01be96] hover:text-white px-3 py-2 rounded-md text-sm font-medium shadow-lg`}
           >
             {label}
           </Link>
         ))}
-      </MenuItems>
+      </motion.div>
 
     </MenuContainer>
   );
@@ -42,8 +47,6 @@ const MenuContainer = styled.div`
   top: 0;
   width: 50vw;
   height: 100vh;
-  // z-index: 60;
-  transition: transform .5s cubic-bezier(.43,.09,.53,.9);
 `
 
 const MenuItems = styled.div`

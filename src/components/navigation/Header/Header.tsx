@@ -1,18 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { FaBars, FaRegWindowClose } from 'react-icons/fa';
 import styled from 'styled-components';
 
 import { menuItems } from '../menuItems';
-import MobileMenu from '../SliderMenu/Menu';
-import SliderMenu from '../SliderMenu/SliderMenu';
+import SliderMenu from '../Menus/SliderMenu/SliderMenu';
 
 export interface IHeader extends React.ComponentPropsWithoutRef<'header'> { }
 
 const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
-  const [isOpen, setIsOpen] = useState(false)
-
   const router = useRouter()
 
   return (
@@ -47,22 +43,11 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
               </div>
             </div>
             <div className="flex md:hidden ">
-              {/* <MenuButton
-                onClick={() => setIsOpen(!isOpen)}
-                type="button"
-              >
-                {!isOpen ? (
-                  <FaBars />
-                ) : (
-                  <FaRegWindowClose />
-                )}
-              </MenuButton> */}
               <SliderMenu />
             </div>
           </div>
         </div>
       </nav>
-      {/* <MobileMenu isOpen={isOpen} /> */}
     </header>
   );
 };

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { FaBars, FaRegWindowClose } from 'react-icons/fa';
-import Menu from './Menu';
+import Menu from '../Menu';
 import { AnimatePresence } from 'framer-motion';
 
 /* variant for framer-motion animation. */
@@ -16,13 +16,19 @@ const slideInLeft = {
     transition: {
       duration: 0.1,
       type: "spring",
-      damping: 25,
-      stiffness: 500,
+      damping: 30,
+      stiffness: 300,
     }
   },
   exit: {
     x: "100vw",
-    opacity: 0
+    opacity: 0,
+    transition: {
+      duration: 0.1,
+      type: "spring",
+      damping: 40,
+      stiffness: 100
+    }
   }
 }
 
@@ -47,7 +53,7 @@ const SliderMenu = () => {
         onExitComplete={() => null}
       >
         {isOpen &&
-          <Menu isOpen={isOpen} />
+          <Menu type={slideInLeft} />
         }
       </AnimatePresence>
 
@@ -63,7 +69,7 @@ const MenuButton = styled.button`
   justify-content: center;
   padding: 0.5rem;
   border-radius: 0.375rem;
-  color: black;
+  color: white;
   z-index: 1000;
   &:hover {
     background-color: #01be96;
