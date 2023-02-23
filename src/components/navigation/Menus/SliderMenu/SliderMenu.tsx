@@ -11,13 +11,15 @@ const slideInLeft = {
     opacity: 0,
   },
   visible: {
-    x: "10vw",
+    x: "5vw",
     opacity: 1,
     transition: {
       duration: 0.1,
       type: "spring",
       damping: 30,
       stiffness: 300,
+      staggerChildren: 0.07, 
+      delayChildren: 0.2
     }
   },
   exit: {
@@ -26,8 +28,10 @@ const slideInLeft = {
     transition: {
       duration: 0.1,
       type: "spring",
-      damping: 40,
-      stiffness: 100
+      damping: 50,
+      stiffness: 100,
+      staggerChildren: 0.05, 
+      staggerDirection: -1
     }
   }
 }

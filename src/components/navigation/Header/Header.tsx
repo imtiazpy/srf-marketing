@@ -42,7 +42,14 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
                 </div>
               </div>
             </div>
-            <div className="flex md:hidden ">
+            <div className="flex items-center space-x-4 md:hidden ">
+              <Link
+                href={'/#projects'}
+                scroll={false}
+                className="cursor-pointer hover:bg-[#01be96] hover:text-white px-3 py-2 rounded-md text-sm font-medium text-white"
+              >
+                Projects
+              </Link>
               <SliderMenu />
             </div>
           </div>

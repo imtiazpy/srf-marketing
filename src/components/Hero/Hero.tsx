@@ -14,7 +14,7 @@ const Hero: React.FC<IHero> = ({ className, ...sectionProps }) => {
   const iconStyle = { border: '1px solid blue', borderRadius: '50%', padding: '5px', fontSize: '28px' }
 
   return (
-    <section id='hero-section' className={`${styles.hero} relative h-auto md:h-[100vh] grid grid-cols-1 py-20 md:py-32 px-2 sm:px-5 md:px-10 items-center gap-4`}>
+    <section id='hero-section' className={`${styles.hero} relative h-[100vh] grid grid-cols-1 py-20 md:py-32 px-2 sm:px-5 md:px-10 items-center gap-4`}>
       <div className='flex flex-col gap-8 items-center text-white'>
         <h1 className='text-4xl sm:text-6xl font-extrabold'>We are</h1>
         <span className='text-4xl sm:text-6xl font-extrabold uppercase text-[#01be96]'>
