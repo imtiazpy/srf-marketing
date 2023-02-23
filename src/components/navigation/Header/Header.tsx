@@ -4,8 +4,9 @@ import { useRouter } from 'next/router';
 import { FaBars, FaRegWindowClose } from 'react-icons/fa';
 import styled from 'styled-components';
 
-import { MenuItems } from '../MenuItems';
-import MobileMenu from './MobileMenu';
+import { menuItems } from '../menuItems';
+import MobileMenu from '../SliderMenu/Menu';
+import SliderMenu from '../SliderMenu/SliderMenu';
 
 export interface IHeader extends React.ComponentPropsWithoutRef<'header'> { }
 
@@ -29,7 +30,7 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
               </div>
               <div className="hidden md:block">
                 <div className="flex items-center space-x-4">
-                  {MenuItems.map(({ name, label }, index) => (
+                  {menuItems.map(({ name, label }, index) => (
                     <Link
                       key={index}
                       href={`/#${name}`}
@@ -46,7 +47,7 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
               </div>
             </div>
             <div className="flex md:hidden ">
-              <MenuButton
+              {/* <MenuButton
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
               >
@@ -55,12 +56,13 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
                 ) : (
                   <FaRegWindowClose />
                 )}
-              </MenuButton>
+              </MenuButton> */}
+              <SliderMenu />
             </div>
           </div>
         </div>
       </nav>
-      <MobileMenu isOpen={isOpen} />
+      {/* <MobileMenu isOpen={isOpen} /> */}
     </header>
   );
 };
